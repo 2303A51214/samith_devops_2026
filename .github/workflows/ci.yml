@@ -8,10 +8,6 @@ jobs:
   integration-tests:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: backend
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -22,7 +18,9 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: backend
         run: npm install
 
       - name: Run integration tests
+        working-directory: backend
         run: npm test
