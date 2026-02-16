@@ -10,7 +10,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: Devops_2026/20260216/backend
+        working-directory: backend
 
     steps:
       - name: Checkout repository
